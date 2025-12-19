@@ -1,5 +1,5 @@
 {
-    "name": "Swift as the Wind",
+    "name": "§aSwift as the Wind",
     "description": "You move with incredible speed, allowing you to outrun most threats.",
     "type": "origins:stacking_status_effect",
     "min_stacks": 1,
