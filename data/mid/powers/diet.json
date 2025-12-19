@@ -1,6 +1,6 @@
 {
   "name": "§l§4Stellar cuisine",
-  "description": "You can only eat rare items; no other food sustains you: glowstone dust, netherstars and froglights",
+  "description": "You can only eat rare items; no other food sustains you: glowstone dust, diamonds, netherstars and froglights",
   "type": "origins:multiple",
 
   "no_food": {
@@ -42,7 +42,38 @@
     "cooldown": 200,
     "hud_render": { "should_render": false }
   },
-
+  "diamonds": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:diamond" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 2 4 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:diamond 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 40,
+    "hud_render": { "should_render": false }
+  },
   "glowstone_dust": {
     "type": "origins:active_self",
     "condition": {
