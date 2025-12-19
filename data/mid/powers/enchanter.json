@@ -1,6 +1,6 @@
 {
   "type": "origins:active_self",
-  "name": "Chaotic Enchanting",
+  "name": "§5§oChaotic Enchanting",
   "description": "Enchants your held item with powerful chaoticddd magic at a steep cost. Requires 5 levels and 5 lapis lazuli to use.",
   "key": {
     "key": "key.origins.secondary_active"

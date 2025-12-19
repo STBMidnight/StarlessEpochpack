@@ -8,7 +8,8 @@
 		"mid:exhaustion",
 		"mid:diet",
 		"mid:noarmor",
-		"mid:enchanter"
+		"mid:enchanter",
+		"mid:transmutation"
 	],
 	"icon": {
 		"id": "minecraft:nether_star"

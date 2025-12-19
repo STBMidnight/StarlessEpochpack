@@ -5,6 +5,6 @@
       "operation": "multiply_base_multiplicative",
       "amount": 2.0
   },
-    "name": "Energy consumption",
+    "name": "§cEnergy consumption",
   "description": "You consume energy at a much higher rate than normal beings."
 }

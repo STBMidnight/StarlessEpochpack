@@ -1,5 +1,5 @@
 {
-    "name": "Light armor",
+    "name": "§cLight armor",
     "description": "You cannot wear armor stronger than copper.",
     "type": "origins:restrict_armor",
     "head": {

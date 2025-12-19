@@ -1,5 +1,5 @@
 {
-  "name": "Stellar cuisine",
+  "name": "§l§4Stellar cuisine",
   "description": "You can only eat rare items; no other food sustains you: glowstone dust, netherstars and froglights",
   "type": "origins:multiple",
 
@@ -33,7 +33,7 @@
     "entity_action": {
       "type": "origins:and",
       "actions": [
-        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 600 2 true" },
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 4500 2 true" },
         { "type": "origins:execute_command", "command": "clear @s minecraft:nether_star 1" },
         { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
       ]
