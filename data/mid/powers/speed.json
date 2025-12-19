@@ -1,0 +1,19 @@
+{
+    "name": "Swift as the Wind",
+    "description": "You move with incredible speed, allowing you to outrun most threats.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 1,
+    "max_stacks": 1,
+    "duration_per_stack": 20,
+    "tick_rate": 10,
+    "effects": [
+        {
+            "id": "minecraft:speed",
+            "duration": 10,
+            "amplifier": 2,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    ]
+}

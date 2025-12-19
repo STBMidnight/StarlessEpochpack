@@ -1,0 +1,67 @@
+{
+  "type": "origins:active_self",
+  "name": "Chaotic Enchanting",
+  "description": "Enchants your held item with powerful chaoticddd magic at a steep cost. Requires 5 levels and 5 lapis lazuli to use.",
+  "key": {
+    "key": "key.origins.secondary_active"
+  },
+  "cooldown": 80,
+
+  "hud_render": {
+    "should_render": true,
+    "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+    "bar_index": 18
+  },
+
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:enchantable"
+        }
+      },
+        {
+        "type": "origins:xp_levels",
+        "comparison": ">=",
+        "compare_to": 5
+        },
+      {
+        "type": "origins:inventory",
+        "process_mode": "items",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:lapis_lazuli"
+          }
+        },
+        "comparison": ">=",
+        "compare_to": 5
+      }
+    ]
+  },
+
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:execute_command",
+        "command": "xp add @s -1 levels"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "clear @s minecraft:lapis_lazuli 5"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "item modify entity @s weapon.mainhand mid:enchant"
+      },
+      {
+        "type": "origins:execute_command",
+        "command": "playsound minecraft:block.enchantment_table.use master @s ~ ~ ~ 1 1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "origins:modify_exhaustion",
+  "modifier": {
+      "id": "Increased exhaustion",
+      "operation": "multiply_base_multiplicative",
+      "amount": 2.0
+  },
+    "name": "Energy consumption",
+  "description": "You consume energy at a much higher rate than normal beings."
+}

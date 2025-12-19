@@ -1,0 +1,35 @@
+{
+  "type": "origins:model_color",
+  "name": "Emptiness",
+  "description": "You are not made of flesh, making you transparent when unarmored.",
+  "red": 0.5,
+  "green": 0.4,
+  "blue": 0.3,
+  "alpha": 0.2,
+
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "head",
+        "item_condition": { "type": "origins:empty" }
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "chest",
+        "item_condition": { "type": "origins:empty" }
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "legs",
+        "item_condition": { "type": "origins:empty" }
+      },
+      {
+        "type": "origins:equipped_item",
+        "equipment_slot": "feet",
+        "item_condition": { "type": "origins:empty" }
+      }
+    ]
+  }
+}

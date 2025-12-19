@@ -1,0 +1,61 @@
+{
+  "name": "Lightning Strike",
+  "description": "Summon 3 lightning strikes in a tight line directly where your cursor is aiming.",
+  "type": "origins:active_self",
+
+  "key": {
+    "key": "key.loadToolbarActivator"
+  },
+
+  "cooldown": 500,
+
+  "hud_render": {
+    "should_render": true,
+    "sprite_location": "origins:textures/gui/resource_bar.png",
+    "bar_index": 2
+  },
+
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+
+      {
+        "type": "origins:delay",
+        "ticks": 1,
+        "action": {
+          "type": "origins:execute_command",
+          "command": "execute positioned ^ ^ ^4 run summon minecraft:lightning_bolt ~ ~ ~"
+        }
+      },
+
+      {
+        "type": "origins:delay",
+        "ticks": 5,
+        "action": {
+          "type": "origins:execute_command",
+          "command": "execute positioned ^ ^ ^7 run summon minecraft:lightning_bolt ~ ~ ~"
+        }
+      },
+
+      {
+        "type": "origins:delay",
+        "ticks": 10,
+        "action": {
+          "type": "origins:and",
+          "actions": [
+
+            {
+              "type": "origins:execute_command",
+              "command": "execute positioned ^ ^ ^10 run summon minecraft:lightning_bolt ~ ~ ~"
+            },
+
+            {
+              "type": "origins:execute_command",
+              "command": "playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 1 1"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "name": "Stellar cuisine",
+  "description": "You can only eat rare items; no other food sustains you: glowstone dust, netherstars and froglights",
+  "type": "origins:multiple",
+
+  "no_food": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+      "type": "origins:food"
+    }
+  },
+
+  "nether_star": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:nether_star" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 600 2 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:nether_star 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 200,
+    "hud_render": { "should_render": false }
+  },
+
+  "glowstone_dust": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:glowstone_dust" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 1 1 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:glowstone_dust 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 20,
+    "hud_render": { "should_render": false }
+  },
+
+  "ochre_froglight": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:ochre_froglight" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 2 1 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:ochre_froglight 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 40,
+    "hud_render": { "should_render": false }
+  },
+
+  "pearlescent_froglight": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:pearlescent_froglight" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 2 1 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:pearlescent_froglight 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 40,
+    "hud_render": { "should_render": false }
+  },
+
+  "verdant_froglight": {
+    "type": "origins:active_self",
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:saturation_level",
+          "comparison": "<=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": { "item": "minecraft:verdant_froglight" }
+          }
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        { "type": "origins:execute_command", "command": "effect give @s minecraft:saturation 2 1 true" },
+        { "type": "origins:execute_command", "command": "clear @s minecraft:verdant_froglight 1" },
+        { "type": "origins:execute_command", "command": "playsound minecraft:block.amethyst_block.chime master @s ~ ~ ~ 1 1" }
+      ]
+    },
+    "key": { "key": "key.use" },
+    "cooldown": 40,
+    "hud_render": { "should_render": false }
+  }
+}

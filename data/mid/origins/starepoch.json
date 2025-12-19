@@ -1,0 +1,20 @@
+{
+	"powers": [
+		
+		"mid:nightvision",
+		"mid:shadowskin",
+		"mid:lightning",
+		"mid:speed",
+		"mid:exhaustion",
+		"mid:diet",
+		"mid:noarmor",
+		"mid:enchanter"
+	],
+	"icon": {
+		"id": "minecraft:nether_star"
+	},
+	"order": 5,
+	"impact": 3,
+	"name": "Starless Epoch",
+	"description": "Those who gaze back when you look at the stars"
+}
